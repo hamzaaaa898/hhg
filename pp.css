@@ -1,0 +1,155 @@
+/* Hide main content initially */
+#main-content {
+    display: none;
+}
+
+/* Slideshow styling */
+.slide { display: none; }
+.fade { animation: fadeEffect 1.5s; }
+@keyframes fadeEffect { from { opacity: 0; } to { opacity: 1; } }
+#opening-animation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6b46c1; /* Deep purple */
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Cursive', sans-serif;
+    opacity: 0;
+    animation: fadeIn 2s forwards; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+#login-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    opacity: 0;
+    animation: slideDown 0.8s forwards ease-in-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#login-box button {
+    background-color: #6b46c1;
+    transition: background-color 0.3s ease;
+}
+
+#login-box button:hover {
+    background-color: #5a3eb4;
+}
+#slideshow img {
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+}
+
+#slideshow img:hover {
+    transform: scale(1.05);
+}
+
+.caption {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4a5568;
+    margin-top: 0.5rem;
+}
+#notes .note-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#notes .note-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+#reasons li {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.6s forwards ease-in-out;
+    animation-delay: calc(0.1s * var(--index));
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+#scrapbook img {
+    border: 5px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+#scrapbook img:hover {
+    transform: rotate(-3deg) scale(1.05);
+}
+button, a {
+    transition: transform 0.2s ease;
+}
+
+button:hover, a:hover {
+    transform: translateY(-2px);
+}
+
+.hidden {
+    display: none; /* Initially hide elements */
+}
+.gift-box {
+    width: 150px;
+    height: 150px;
+    /*background-color: #ffcc00; /* Gift box color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid none;
+    cursor: pointer;
+    margin: 20px auto;
+    font-size: 50px; /* Adjust emoji size */
+}
+.gift-items-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px; /* Space between gift items */
+}
+.gift-item {
+    width: 100px; /* Item size */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s; /* Animation effect */
+}
+.gift-item:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+.message-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gift-box {
+    transition: transform 0.2s;
+}
+.gift-box:hover {
+    transform: scale(1.05); /* Slightly enlarge the gift box on hover */
+}
+.gift-item {
+    transition: transform 0.2s; /* Animation effect */
+}
+.gift-item:hover {
+    transform: translateY(-3px); /* Lift the gift item slightly on hover */
+}
+
+
